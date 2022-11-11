@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/*header*/
+
+
+.header {
+    background: linear-gradient(241deg, rgba(2,0,36,1) 0%, rgba(9,121,37,1) 35%, rgba(10,64,25,0.8687850140056023) 75%);
+    padding-inline: 3%;
+}
+
+.fila>li>a{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+  }
+
+  .fila>li>a:hover{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(226, 222, 222);
+  }
+
+
+/*texto con imagen de fondo*/
+
+.degradado2 {
+    max-height: 500px;
+        background-image: url('imag/biblioteca.jpg') , rgba(transparent);
+        background-size: cover;
+        background-position: center;
+      
+}
+
+.texto {
+    padding: 4%;
+}
+
+.button {
+    padding: 3px 60px;
+    text-decoration:rgb(0, 0, 0);
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.imagfondo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    background: url(imag/biblioteca.jpg), rgba(0, 0, 0, 0.671);
+    background-blend-mode: color;
+    height: 50vh;
+
+}
+
+.sub {
+    text-size-adjust: 2em;
+    border-radius: 2%;
+    border-start-end-radius: 2%;
+}

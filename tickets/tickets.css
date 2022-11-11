@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/*header*/
+
+
+.header {
+    background: linear-gradient(241deg, rgba(2,0,36,1) 0%, rgba(9,121,37,1) 35%, rgba(10,64,25,0.8687850140056023) 75%);
+    padding-inline: 3%;
+}
+
+.fila>li>a{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+  }
+
+  .fila>li>a:hover{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(226, 222, 222);
+  }
