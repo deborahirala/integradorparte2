@@ -8,7 +8,7 @@
 
 
 .header {
-    background: linear-gradient(241deg, rgba(2,0,36,1) 0%, rgba(9,121,37,1) 35%, rgba(10,64,25,0.8687850140056023) 75%);
+    background:  rgb(196, 195, 209);
     padding-inline: 3%;
 }
 
@@ -21,3 +21,4 @@
     font-family: 'Open Sans', sans-serif;
     color: rgb(226, 222, 222);
   }
+

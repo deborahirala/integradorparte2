@@ -1,56 +1,62 @@
-const datos = {
-    cantidad: '',
-    categoria: ''
+const data = {
+    amount: '',
+    category: ''
 };
 
-var categoria;
-datos.categoria = 'estudiante';
+const amount = document.querySelector('#amount');
+const category = document.querySelector ('#category')
+const total = document.querySelector('#total');
+const btnAbstract = document.querySelector('.btnAbstract');
+const btnErase = document.querySelector('.btnErase');
+const form = document.querySelector('.form');
 
-const cantidad = document.querySelector('#cantidad');
-categoria = document.querySelector('#categoria');
-const totalAPagar = document.querySelector('#totalAPagar');
-const btnResumen = document.querySelector('.btnResumen');
-const btnBorrar = document.querySelector('.btnBorrar');
-const formulario = document.querySelector('.formulario');
-
-cantidad.addEventListener('input', function(event){
-    datos.cantidad = event.target.value;
+amount.addEventListener('input', function(event){
+    data.amount = event.target.value;
     console.log("Cantidad: " + event.target.value + " guardada");
 });
 
-categoria.addEventListener('change', function(event){
-    datos.categoria = event.target.value;
+category.addEventListener('change', function(event){
+    data.category = event.target.value;
     console.log("Categoria: " + event.target.value + " guardada");
 });
 
-btnResumen.addEventListener('click' , function(event){
+btnAbstract.addEventListener('click' , function(event){
     event.preventDefault();
-    const {cantidad, categoria} = datos;
-    var resultado = 0;    
-    var indice = 0;
-    indice = totalAPagar.textContent.indexOf('$');
-    totalAPagar.textContent = totalAPagar.textContent.substring(0, indice+1);
-    if(categoria == 'directivo'){
-        resultado = (200*cantidad)*0.2;
-        console.log("La categoria seleccionada es (E): " + categoria);
+    const {amount, category} = data;
+    let result = 0;    
+    let indice = 0;
+    indice = total.textContent.indexOf('$');
+    total.textContent = total.textContent.substring(0, indice+1);
+    if(category == 'directivo'){
+        result = (200*amount)*0.2;
+        console.log("La categoria seleccionada es (D): " + category);
     } 
-    else if(categoria == 'profesor'){
-        resultado = (200*cantidad)*0.5;
-        console.log("La categoria seleccionada es (P): " + categoria);
+    else if(category == 'profesor'){
+        result = (200*amount)*0.5;
+        console.log("La categoria seleccionada es (P): " + category);
     }
-    else if(categoria == 'estudiante'){
-        resultado = (200*cantidad)*0.85;
-        console.log("La categoria seleccionada es (D): " + categoria);
+    else if(category == 'estudiante'){
+        result = (200*amount)*0.85;
+        console.log("La categoria seleccionada es (E): " + category);
     }
-    totalAPagar.textContent += resultado;
-    return;
+    {
+        if (amount <= 0 || amount === "") {
+        console.log ("Debe ingresar la cantidad");
+        }
+    }
+
+        if (category ==="") {
+            console.log ("debe seleccionar la categoria")
+        }
+
+
+    total.textContent += result;
 });
 
-btnBorrar.addEventListener('click' , function(event){
+btnErase.addEventListener('click' , function(event){
     event.preventDefault();
-    var indice = 0;
-    indice = totalAPagar.textContent.indexOf('$');
-    totalAPagar.textContent = totalAPagar.textContent.substring(0, indice+1);
-    formulario.reset();
-    return;
+    let indice = 0;
+    indice = total.textContent.indexOf('$');
+    total.textContent = total.textContent.substring(0, indice+1);
+    form.reset();
 });
