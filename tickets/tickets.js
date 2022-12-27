@@ -1,62 +1,68 @@
 const data = {
     amount: '',
-    category: ''
+    select: '',
 };
 
+
 const amount = document.querySelector('#amount');
-const category = document.querySelector ('#category')
 const total = document.querySelector('#total');
-const btnAbstract = document.querySelector('.btnAbstract');
-const btnErase = document.querySelector('.btnErase');
-const form = document.querySelector('.form');
 
 amount.addEventListener('input', function(event){
     data.amount = event.target.value;
     console.log("Cantidad: " + event.target.value + " guardada");
 });
 
-category.addEventListener('change', function(event){
-    data.category = event.target.value;
+select.addEventListener('change', function(event){
+    data.select = event.target.value;
     console.log("Categoria: " + event.target.value + " guardada");
 });
-
-btnAbstract.addEventListener('click' , function(event){
+button2.addEventListener('click' , function(event){
     event.preventDefault();
-    const {amount, category} = data;
+    const {amount, select} = data;
+    
     let result = 0;    
-    let indice = 0;
-    indice = total.textContent.indexOf('$');
-    total.textContent = total.textContent.substring(0, indice+1);
-    if(category == 'directivo'){
+    let index = 0;
+    index = total.textContent.indexOf('$');
+    total.textContent = total.textContent.substring(0, index+1);
+    if(select == '1'){
         result = (200*amount)*0.2;
-        console.log("La categoria seleccionada es (D): " + category);
+        console.log("La categoria seleccionada es (D): " + select);
     } 
-    else if(category == 'profesor'){
+    else if(select == '2'){
         result = (200*amount)*0.5;
-        console.log("La categoria seleccionada es (P): " + category);
+        console.log("La categoria seleccionada es (P): " + select);
     }
-    else if(category == 'estudiante'){
+    else if(select == '3'){
         result = (200*amount)*0.85;
-        console.log("La categoria seleccionada es (E): " + category);
+        console.log("La categoria seleccionada es (E): " + select);
     }
-    {
-        if (amount <= 0 || amount === "") {
-        console.log ("Debe ingresar la cantidad");
-        }
-    }
+    
+    if(card1.value == '1'){
+        result = (200*amount)*0.2;
+        console.log("La categoria seleccionada es (D): " + select);
+    } 
 
-        if (category ==="") {
-            console.log ("debe seleccionar la categoria")
-        }
+    if (form.value1.value === '') {result = "0"}
+    if (form.value2.value === '') {result = "0"}
+    if (form.mail.value === '') {result = "0"}
+
 
 
     total.textContent += result;
+
+    if (result > 1) {
+    Swal.fire('¡guardado! su total es de $' + result);
+    
+    }
+    
 });
 
-btnErase.addEventListener('click' , function(event){
+
+button1.addEventListener('click' , function(event){
     event.preventDefault();
-    let indice = 0;
-    indice = total.textContent.indexOf('$');
-    total.textContent = total.textContent.substring(0, indice+1);
+    let index = 0;
+    index = total.textContent.indexOf('$');
+    total.textContent = total.textContent.substring(0, index+1);
     form.reset();
 });
+

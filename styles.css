@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
-    margin: 0%;
+    margin: 0%,0%,0%,0%;
     padding: 0%;
+    margin-left: 0%; 
+    
 }
 
 /*header*/
 
+.cards {
+    
+    overflow: hidden;
+}
 
 .header {
     background:  rgb(196, 195, 209);
@@ -26,19 +32,20 @@
 /*texto con imagen de fondo*/
 
 .degradado2 {
-    max-height: 500px;
+        max-height: 500px;
         background-image: url('imag/biblioteca.jpg') , rgba(transparent);
         background-size: cover;
         background-position: center;
+        margin: 0%;
       
 }
 
 .texto {
-    padding: 4%;
+    padding: 3%;
 }
 
 .button {
-    padding: 3px 60px;
+    padding: 1px 80px;
     text-decoration:rgb(0, 0, 0);
 }
 
@@ -56,6 +63,7 @@
     background: url(imag/biblioteca.jpg), rgba(0, 0, 0, 0.671);
     background-blend-mode: color;
     height: 50vh;
+    margin-left: 0%;
 
 }
 
@@ -63,4 +71,5 @@
     text-size-adjust: 2em;
     border-radius: 2%;
     border-start-end-radius: 2%;
+
 }

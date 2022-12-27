@@ -13,8 +13,8 @@
 
 <body>
     <header class="header justify-content-between">
-        <nav class="navbar d-flex flex-row ">
-            <div class="d-flex  align-items-center">
+        <nav class="navbar d-flex flex-row">
+            <div class="d-flex align-items-center">
                 <a class="navbar-brand" href="#">
                     <img src="../imag/loguito.png" alt="Logo" width="60" height="40" class="d-inline-block">
                 </a>
@@ -42,8 +42,8 @@
     <main>
         <div class="container w-100" style="padding-top: 8rem; padding-bottom: 2rem;">
             <div class="row d-flex justify-content-center">
-                <div3 class="col-3" style="width: auto;">
-                    <div class="card border border-primary p-1">
+                <div  class="btn col-3 letter" style="width: auto;">
+                    <div id="card1" class="card border border-muted p-1">
                         <div class="card-body text-center">
                             <h5 class="card-title">directivo</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -52,9 +52,9 @@
                                 documentación</h6>
                         </div>
                     </div>
-                </div3>
-                <div3 class="col-3" style="width: auto;">
-                    <div class="card border border-primary p-1">
+                </div>
+                <div  class="btn col-3 letter" style="width: auto;">
+                    <div id="card2" class="card border border-muted p-1">
                         <div class="card-body text-center">
                             <h5 class="card-title">profesor</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -63,9 +63,9 @@
                                 documentación</h6>
                         </div>
                     </div>
-                </div3>
-                <div3 class="col-3" style="width: auto;">
-                    <div class="card border border-warning p-1">
+                </div>
+                <div  class="btn col-3 letter" style="width: auto;">
+                    <div id="card3" class="card border border-muted p-1">
                         <div class="card-body text-center">
                             <h5 class="card-title">estudiante</h5>
                             <p class="card-text">Tienen un descuento</p>
@@ -74,7 +74,7 @@
                                 documentación</h6>
                         </div>
                     </div>
-                </div3>
+                </div>
             </div>
         </div>
 
@@ -84,26 +84,27 @@
                 <h2>VALOR DE TICKET $200</h2>
                 </p>
             </div>
-            <form class="row g-1 gx-2 formulario">
+            <form name="form" class="row g-1 gx-2 formulario">
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input id="value1" name="value1" type="text" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" placeholder="Apellido">
+                    <input id="value2" name="value" type="text" class="form-control" placeholder="Apellido">
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="Correo">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="amount" class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" id="amount" placeholder="Cantidad">
+                    <input type="number" min="1" step="1" class="form-control" id="amount" name="amount" placeholder="Cantidad">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="cantidad" class="form-label">Categoría</label>
-                    <select id="category" class="form-select">
-                        <option value="estudiante">Estudiante</option>
-                        <option value="profesor">profesor</option>
-                        <option value="directivo">directivo</option>
+                    <label for="category" class="form-label">Categoría</label>
+                    <select id="value3" name="options" class="form-select">
+                        <option selected="">Categoria</option>
+                        <option value="3">Estudiante</option>
+                        <option value="2">profesor</option>
+                        <option value="1">directivo</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -111,15 +112,23 @@
                 </div>
 
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn text-white fs-6 btnErase bg-dark" type=" button">Borrar</button>
+                    <button name="button1" id="button1" class="btn text-white fs-6 btnErase bg-dark" type=" button">Borrar</button>
                 </div>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn text-white fs-6 btnAbstract bg-dark" type=" button">Ver Total</button>
+                <div id="button2" class="d-grid gap-2 col-6 mx-auto">
+                    <button name="button2" class="btn text-white fs-6 btnAbstract bg-dark" type=" button">Ver Total</button>
                 </div>
             </form>
         </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        <script src="tickets.js"></script>
+        <script src="dom.js" ></script>
+        <script src="cuadros.js" ></script>
+         
+         <script src="botones.js" ></script>    
+         
+         <script src="tickets.js" ></script>
+        
+     
     </main>
 
 
